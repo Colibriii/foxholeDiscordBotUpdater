@@ -1,0 +1,3048 @@
+{
+    "TheFingersHex": {
+        "casualties": {
+            "warden": 3,
+            "colonial": 0
+        },
+        "structures": {
+            "0.190_0.444": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.832_0.567": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.341_0.620": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.329_0.845": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.590_0.537": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.538_0.808": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.451_0.366": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.691_0.236": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.293_0.179": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "KuuraStrandHex": {
+        "casualties": {
+            "warden": 3,
+            "colonial": 1
+        },
+        "structures": {
+            "0.476_0.370": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.364_0.202": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.368_0.820": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.743_0.384": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.265_0.517": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.419_0.583": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "TempestIslandHex": {
+        "casualties": {
+            "warden": 3,
+            "colonial": 2
+        },
+        "structures": {
+            "0.527_0.338": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.622_0.467": {
+                "team": "WARDENS",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.682_0.643": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.402_0.438": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.336_0.834": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.556_0.715": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.125_0.519": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.850_0.411": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.706_0.305": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "MarbanHollow": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 16
+        },
+        "structures": {
+            "0.640_0.900": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.523_0.545": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.731_0.157": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.358_0.742": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.637_0.407": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.225_0.269": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.801_0.472": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.633_0.452": {
+                "team": "NONE",
+                "type": 27,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "EndlessShoreHex": {
+        "casualties": {
+            "warden": 3,
+            "colonial": 1
+        },
+        "structures": {
+            "0.358_0.808": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.853_0.530": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.335_0.166": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.701_0.735": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.207_0.616": {
+                "team": "WARDENS",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.305_0.384": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.180_0.413": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.578_0.801": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.503_0.296": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.514_0.465": {
+                "team": "NONE",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "GutterHex": {
+        "casualties": {
+            "warden": 2,
+            "colonial": 7
+        },
+        "structures": {
+            "0.664_0.414": {
+                "team": "COLONIALS",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.318_0.470": {
+                "team": "COLONIALS",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.257_0.279": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.193_0.538": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.517_0.618": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.600_0.201": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.375_0.196": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "WrestaHex": {
+        "casualties": {
+            "warden": 2,
+            "colonial": 0
+        },
+        "structures": {
+            "0.661_0.600": {
+                "team": "COLONIALS",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.690_0.264": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.348_0.763": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.642_0.822": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.804_0.511": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.268_0.496": {
+                "team": "NONE",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.472_0.565": {
+                "team": "NONE",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "TyrantFoothillsHex": {
+        "casualties": {
+            "warden": 2,
+            "colonial": 4
+        },
+        "structures": {
+            "0.348_0.862": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.481_0.317": {
+                "team": "WARDENS",
+                "type": 56,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.243_0.493": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.822_0.529": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.640_0.233": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.606_0.834": {
+                "team": "NONE",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.392_0.214": {
+                "team": "NONE",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "WestgateHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 0
+        },
+        "structures": {
+            "0.596_0.563": {
+                "team": "COLONIALS",
+                "type": 27,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.622_0.418": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.831_0.433": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.366_0.103": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.645_0.725": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.583_0.563": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.466_0.278": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.818_0.577": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.687_0.181": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.291_0.816": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.455_0.808": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "MooringCountyHex": {
+        "casualties": {
+            "warden": 9,
+            "colonial": 3
+        },
+        "structures": {
+            "0.252_0.742": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.476_0.496": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.720_0.204": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.582_0.807": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.727_0.607": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.432_0.171": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.643_0.074": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.770_0.791": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.246_0.439": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.417_0.682": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.376_0.897": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.227_0.271": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "LochMorHex": {
+        "casualties": {
+            "warden": 25,
+            "colonial": 18
+        },
+        "structures": {
+            "0.453_0.130": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.486_0.423": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.762_0.519": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.585_0.759": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.630_0.156": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.268_0.213": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.187_0.518": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "MorgensCrossingHex": {
+        "casualties": {
+            "warden": 42,
+            "colonial": 0
+        },
+        "structures": {
+            "0.614_0.539": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.294_0.362": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.583_0.148": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.359_0.120": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.610_0.342": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.341_0.781": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "RedRiverHex": {
+        "casualties": {
+            "warden": 0,
+            "colonial": 1
+        },
+        "structures": {
+            "0.367_0.473": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.705_0.400": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.503_0.164": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.442_0.645": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.545_0.390": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.711_0.143": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.266_0.271": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.774_0.563": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "HowlCountyHex": {
+        "casualties": {
+            "warden": 0,
+            "colonial": 2
+        },
+        "structures": {
+            "0.507_0.413": {
+                "team": "WARDENS",
+                "type": 27,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.587_0.820": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.401_0.645": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.175_0.460": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.655_0.355": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.870_0.415": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.344_0.856": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.404_0.384": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.694_0.651": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "ClahstraHex": {
+        "casualties": {
+            "warden": 4,
+            "colonial": 8
+        },
+        "structures": {
+            "0.698_0.734": {
+                "team": "WARDENS",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.416_0.486": {
+                "team": "COLONIALS",
+                "type": 56,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.552_0.205": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.380_0.866": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.304_0.735": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.187_0.475": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.372_0.255": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.735_0.385": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "TerminusHex": {
+        "casualties": {
+            "warden": 11,
+            "colonial": 0
+        },
+        "structures": {
+            "0.254_0.358": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.453_0.739": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.777_0.283": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.342_0.129": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.814_0.528": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.262_0.731": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "LinnMercyHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 15
+        },
+        "structures": {
+            "0.232_0.630": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.585_0.154": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.361_0.211": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.617_0.741": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.837_0.488": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.416_0.705": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.465_0.452": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.381_0.880": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.726_0.315": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.742_0.765": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.359_0.590": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "ClansheadValleyHex": {
+        "casualties": {
+            "warden": 19,
+            "colonial": 0
+        },
+        "structures": {
+            "0.567_0.820": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.561_0.384": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.781_0.347": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.287_0.438": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.714_0.584": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.407_0.143": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.375_0.717": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "PipersEnclaveHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 17
+        },
+        "structures": {
+            "0.400_0.775": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.705_0.531": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.334_0.278": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.255_0.609": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.665_0.788": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.480_0.450": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "GodcroftsHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 0
+        },
+        "structures": {
+            "0.264_0.599": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.548_0.208": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.736_0.428": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.396_0.130": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.561_0.473": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.440_0.733": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.295_0.425": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.729_0.747": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.664_0.227": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "FishermansRowHex": {
+        "casualties": {
+            "warden": 2,
+            "colonial": 8
+        },
+        "structures": {
+            "0.389_0.305": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.392_0.731": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.464_0.527": {
+                "team": "COLONIALS",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.730_0.441": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.285_0.605": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.295_0.455": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.606_0.325": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.697_0.800": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.472_0.126": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "UmbralWildwoodHex": {
+        "casualties": {
+            "warden": 3,
+            "colonial": 1
+        },
+        "structures": {
+            "0.327_0.504": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.817_0.391": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.677_0.185": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.396_0.825": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.275_0.225": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.673_0.617": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.617_0.323": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.574_0.787": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.508_0.162": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.156_0.552": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.839_0.548": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "CallahansPassageHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 5
+        },
+        "structures": {
+            "0.534_0.147": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.197_0.277": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.577_0.424": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.745_0.255": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.731_0.669": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.362_0.755": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.527_0.605": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.448_0.769": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.299_0.559": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.751_0.439": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "LykosIsleHex": {
+        "casualties": {
+            "warden": 2,
+            "colonial": 0
+        },
+        "structures": {
+            "0.278_0.513": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.640_0.818": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.269_0.817": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.722_0.219": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.408_0.100": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.593_0.164": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.538_0.596": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "KingsCageHex": {
+        "casualties": {
+            "warden": 234,
+            "colonial": 8
+        },
+        "structures": {
+            "0.674_0.688": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.461_0.191": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.380_0.465": {
+                "team": "WARDENS",
+                "type": 56,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.586_0.825": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.206_0.442": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.387_0.784": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.714_0.320": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.695_0.521": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "SableportHex": {
+        "casualties": {
+            "warden": 0,
+            "colonial": 0
+        },
+        "structures": {
+            "0.789_0.618": {
+                "team": "COLONIALS",
+                "type": 27,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.339_0.692": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.469_0.289": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.644_0.692": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.769_0.583": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.715_0.336": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.360_0.138": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.324_0.464": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "GreatMarchHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 1
+        },
+        "structures": {
+            "0.313_0.193": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.606_0.229": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.553_0.440": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.409_0.879": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.220_0.503": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.536_0.630": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.771_0.463": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.697_0.120": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.371_0.361": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "ViperPitHex": {
+        "casualties": {
+            "warden": 21,
+            "colonial": 0
+        },
+        "structures": {
+            "0.384_0.829": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.625_0.712": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.817_0.513": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.443_0.354": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.281_0.552": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.533_0.541": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.345_0.599": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.270_0.822": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "BasinSionnachHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 0
+        },
+        "structures": {
+            "0.419_0.518": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.226_0.411": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.617_0.320": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.714_0.582": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.862_0.434": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.353_0.787": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "StemaLandingHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 0
+        },
+        "structures": {
+            "0.597_0.337": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.380_0.820": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.546_0.218": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.329_0.225": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.642_0.644": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.656_0.828": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.186_0.525": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.826_0.557": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.448_0.522": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "DeadLandsHex": {
+        "casualties": {
+            "warden": 2918,
+            "colonial": 2768
+        },
+        "structures": {
+            "0.725_0.711": {
+                "team": "COLONIALS",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.491_0.850": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.320_0.236": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.548_0.499": {
+                "team": "WARDENS",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.225_0.530": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.616_0.130": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.420_0.482": {
+                "team": "WARDENS",
+                "type": 56,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.261_0.739": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.463_0.618": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.463_0.267": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.843_0.488": {
+                "team": "NONE",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "HeartlandsHex": {
+        "casualties": {
+            "warden": 0,
+            "colonial": 1
+        },
+        "structures": {
+            "0.732_0.204": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.826_0.493": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.242_0.434": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.651_0.835": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.360_0.275": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.601_0.461": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.374_0.111": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.549_0.254": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.393_0.407": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.752_0.378": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "OarbreakerHex": {
+        "casualties": {
+            "warden": 2,
+            "colonial": 1
+        },
+        "structures": {
+            "0.596_0.206": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.362_0.810": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.570_0.792": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.203_0.433": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.788_0.441": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.490_0.547": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.737_0.662": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.326_0.695": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.360_0.170": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "AcrithiaHex": {
+        "casualties": {
+            "warden": 0,
+            "colonial": 3
+        },
+        "structures": {
+            "0.755_0.465": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.430_0.324": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.394_0.611": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.459_0.094": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.496_0.503": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.271_0.293": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.712_0.633": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.713_0.123": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "WeatheredExpanseHex": {
+        "casualties": {
+            "warden": 488,
+            "colonial": 1
+        },
+        "structures": {
+            "0.520_0.778": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.272_0.524": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.459_0.154": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.691_0.499": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.652_0.723": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.485_0.538": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.349_0.692": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.159_0.471": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.387_0.307": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "ReaversPassHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 0
+        },
+        "structures": {
+            "0.262_0.476": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.429_0.730": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.727_0.505": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.660_0.798": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.517_0.135": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.337_0.862": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.320_0.188": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "StonecradleHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 0
+        },
+        "structures": {
+            "0.732_0.690": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.512_0.514": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.276_0.780": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.216_0.556": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.553_0.700": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.773_0.461": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.417_0.890": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.594_0.103": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.702_0.207": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "PariPeakHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 7
+        },
+        "structures": {
+            "0.690_0.707": {
+                "team": "COLONIALS",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.576_0.402": {
+                "team": "COLONIALS",
+                "type": 56,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.397_0.738": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.756_0.387": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.585_0.844": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "AllodsBightHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 0
+        },
+        "structures": {
+            "0.373_0.210": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.492_0.599": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.746_0.448": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.355_0.388": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.259_0.246": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.246_0.566": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.390_0.734": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "KalokaiHex": {
+        "casualties": {
+            "warden": 2,
+            "colonial": 5
+        },
+        "structures": {
+            "0.655_0.215": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.482_0.451": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.450_0.724": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.687_0.596": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.559_0.900": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.644_0.101": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.215_0.474": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "OriginHex": {
+        "casualties": {
+            "warden": 0,
+            "colonial": 1
+        },
+        "structures": {
+            "0.320_0.541": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.614_0.336": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.321_0.780": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.636_0.781": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.449_0.415": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.585_0.112": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.810_0.591": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "OlavisWakeHex": {
+        "casualties": {
+            "warden": 0,
+            "colonial": 1
+        },
+        "structures": {
+            "0.655_0.768": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.297_0.332": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.536_0.513": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.657_0.404": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "ShackledChasmHex": {
+        "casualties": {
+            "warden": 2,
+            "colonial": 3
+        },
+        "structures": {
+            "0.694_0.623": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.654_0.143": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.409_0.187": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.231_0.607": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.439_0.674": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.222_0.355": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.468_0.477": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.842_0.389": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.624_0.383": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.710_0.862": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "SpeakingWoodsHex": {
+        "casualties": {
+            "warden": 0,
+            "colonial": 0
+        },
+        "structures": {
+            "0.561_0.544": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.622_0.325": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.306_0.475": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.458_0.223": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.740_0.155": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.744_0.803": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.394_0.713": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.886_0.455": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "NevishLineHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 1
+        },
+        "structures": {
+            "0.346_0.695": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.827_0.436": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.593_0.232": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.391_0.207": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.697_0.654": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.414_0.871": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.662_0.084": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.559_0.520": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "CallumsCapeHex": {
+        "casualties": {
+            "warden": 3,
+            "colonial": 0
+        },
+        "structures": {
+            "0.709_0.570": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.398_0.235": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.752_0.777": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.147_0.503": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.480_0.852": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.753_0.284": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.235_0.749": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "ReachingTrailHex": {
+        "casualties": {
+            "warden": 0,
+            "colonial": 1
+        },
+        "structures": {
+            "0.375_0.745": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.329_0.496": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.543_0.678": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.839_0.547": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.703_0.387": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.448_0.325": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.152_0.364": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.442_0.918": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.704_0.850": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.742_0.560": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.293_0.156": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "StlicanShelfHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 0
+        },
+        "structures": {
+            "0.358_0.437": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.189_0.442": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.430_0.717": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.672_0.314": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.233_0.595": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.329_0.215": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.289_0.755": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.609_0.573": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.610_0.853": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "PalantineBermHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 0
+        },
+        "structures": {
+            "0.381_0.545": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.572_0.476": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.370_0.130": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.533_0.675": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.775_0.382": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.282_0.376": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.631_0.185": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "AshFieldsHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 0
+        },
+        "structures": {
+            "0.514_0.553": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.462_0.134": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.279_0.226": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.757_0.425": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.270_0.448": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.720_0.726": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.707_0.126": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "DrownedValeHex": {
+        "casualties": {
+            "warden": 16,
+            "colonial": 5
+        },
+        "structures": {
+            "0.371_0.705": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.807_0.558": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.631_0.168": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.633_0.807": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.420_0.208": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.544_0.528": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.667_0.303": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.234_0.517": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.385_0.511": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.332_0.295": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.472_0.802": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.369_0.544": {
+                "team": "NONE",
+                "type": 27,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "FarranacCoastHex": {
+        "casualties": {
+            "warden": 7,
+            "colonial": 7
+        },
+        "structures": {
+            "0.703_0.779": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.433_0.872": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.501_0.225": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.586_0.567": {
+                "team": "COLONIALS",
+                "type": 56,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.855_0.487": {
+                "team": "WARDENS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.437_0.645": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": true,
+                "is_scorched": false
+            },
+            "0.654_0.148": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.476_0.382": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.782_0.335": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.612_0.405": {
+                "team": "WARDENS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.628_0.717": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    },
+    "OnyxHex": {
+        "casualties": {
+            "warden": 1,
+            "colonial": 0
+        },
+        "structures": {
+            "0.540_0.556": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.575_0.815": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.536_0.132": {
+                "team": "COLONIALS",
+                "type": 58,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.202_0.592": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.741_0.310": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            },
+            "0.573_0.298": {
+                "team": "COLONIALS",
+                "type": 45,
+                "is_vp": false,
+                "is_scorched": false
+            }
+        }
+    }
+}
