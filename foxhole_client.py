@@ -7,10 +7,9 @@ import math
 
 # config
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_FILE = os.path.join(BASE_DIR, "war_state.json")
 SHARD_URL = "https://war-service-live.foxholeservices.com/api" # Able SHARD
 SHARD_URL3 = "https://war-service-live-3.foxholeservices.com/api" # Charlie SHARD
-HEADERS = { "User-Agent": "FoxholeWarBot/2.2 From .colibri" }
+HEADERS = { "User-Agent": "FoxholeWarBot/3.0 From .colibri" }
 
 IMPORTANT_STRUCTURES = [56, 57, 58, 45, 27] 
 
@@ -26,43 +25,54 @@ if os.path.exists(CACHE_FILE):
         print(f"Critical error, impossible to read {CACHE_FILE} : {e}")
         _STATIC_DATA_MEMORY = {}
 else:
-    print(f"impossible to fin file ! {CACHE_FILE}")
+    print(f"impossible to find file ! {CACHE_FILE}")
     print("   -> City names unavailable. May cause problems.")
     _STATIC_DATA_MEMORY = {}
 
 FLAG_VICTORY_BASE = 0x01
 FLAG_IS_SCORCHED  = 0x10
 
-def load_local_data():
-    if os.path.exists(DATA_FILE):
+def get_api_url(shard):
+    return SHARD_URL3 if shard == 3 else SHARD_URL
+
+def get_data_file(shard):
+    suffix = "-3" if shard == 3 else ""
+    return os.path.join(BASE_DIR, f"war_state{suffix}.json")
+
+def load_local_data(shard=1):
+    file_path = get_data_file(shard)
+    if os.path.exists(file_path):
         try:
-            with open(DATA_FILE, 'r', encoding='utf-8') as f:
+            with open(file_path, 'r', encoding='utf-8') as f:
                 return json.load(f)
         except json.JSONDecodeError:
             return {}
     return {}
 
-def save_local_data(data):
+def save_local_data(data, shard=1):
+    file_path = get_data_file(shard)
     try:
-        with open(DATA_FILE, 'w', encoding='utf-8') as f:
+        with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=4)
     except:
         pass
 
-def get_map_names():
+def get_map_names(shard=1):
     try:
-        resp = requests.get(f"{SHARD_URL}/worldconquest/maps", headers=HEADERS)
+        url = get_api_url(shard)
+        resp = requests.get(f"{url}/worldconquest/maps", headers=HEADERS)
         return resp.json() if resp.status_code == 200 else []
     except:
         return []
 
-def get_map_data(map_name):
+def get_map_data(map_name, shard=1):
     """get death and cities data"""
     data = {"casualties": {}, "structures": {}}
+    url = get_api_url(shard)
     
     # 1. War Report
     try:
-        resp = requests.get(f"{SHARD_URL}/worldconquest/warReport/{map_name}", headers=HEADERS, timeout=2)
+        resp = requests.get(f"{url}/worldconquest/warReport/{map_name}", headers=HEADERS, timeout=2)
         if resp.status_code == 200:
             r = resp.json()
             data["casualties"] = {
@@ -74,7 +84,7 @@ def get_map_data(map_name):
 
     # 2. Dynamic Data
     try:
-        resp = requests.get(f"{SHARD_URL}/worldconquest/maps/{map_name}/dynamic/public", headers=HEADERS, timeout=2)
+        resp = requests.get(f"{url}/worldconquest/maps/{map_name}/dynamic/public", headers=HEADERS, timeout=2)
         if resp.status_code == 200:
             items = resp.json().get("mapItems", [])
             for item in items:
@@ -96,22 +106,21 @@ def get_map_data(map_name):
 
     return data
 
-def get_war_info():
+def get_war_info(shard=1):
     """Global info of war"""
     try:
-        resp = requests.get(f"{SHARD_URL}/worldconquest/war", headers=HEADERS, timeout=5)
+        url = get_api_url(shard)
+        resp = requests.get(f"{url}/worldconquest/war", headers=HEADERS, timeout=5)
         if resp.status_code == 200:
             return resp.json()
     except:
         pass
     return None
 
-import re
-import math
-
 def get_location_name(map_name, x, y):
     """
-    Return the location exact (town then hex)
+    Return the location exact (town then hex). 
+    Note: Static data is the same for all shards.
     """
     global _STATIC_DATA_MEMORY
 
@@ -146,12 +155,12 @@ def clean_map_name(map_name):
         map_name = map_name[:-3]
     return re.sub(r'(?<!^)(?=[A-Z])', ' ', map_name)
 
-def update_war_state():
-    print("Scanning war state...")
+def update_war_state(shard=1):
+    print(f"Scanning war state for Shard {shard}...")
     
-    old_state = load_local_data()
+    old_state = load_local_data(shard)
     new_state = {}
-    maps = get_map_names()
+    maps = get_map_names(shard)
     
     changes_log = []
     
@@ -168,7 +177,7 @@ def update_war_state():
     active_maps = [m for m in maps if m != "HomeRegionC" and m != "HomeRegionW"]
 
     for map_name in active_maps:
-        map_info = get_map_data(map_name)
+        map_info = get_map_data(map_name, shard)
         
         if not map_info:
             print(f"No data for {map_name}, skip. (this may be an error !)")
@@ -246,11 +255,11 @@ def update_war_state():
                             recent_changes[map_name] = []
                         recent_changes[map_name].append(key)
 
-    war_info = get_war_info()
+    war_info = get_war_info(shard)
     required_vp = war_info.get("requiredVictoryTowns", 32) if war_info else 32
 
-    save_local_data(new_state)
-    print(f"Update finished. {total_warden_dead_diff}W / {total_colonial_dead_diff}C Deaths detected.")
+    save_local_data(new_state, shard)
+    print(f"Update finished for Shard {shard}. {total_warden_dead_diff}W / {total_colonial_dead_diff}C Deaths detected.")
     
     return {
         "logs": changes_log,
@@ -264,12 +273,13 @@ def update_war_state():
         "total_casualties": total_casualties,
     }
 
-def is_resistance_phase():
+def is_resistance_phase(shard=1):
     """
     check if it is resistance phase or no.
     """
     try:
-        response = requests.get(SHARD_URL)
+        url = get_api_url(shard)
+        response = requests.get(f"{url}/worldconquest/war", headers=HEADERS)
         response.raise_for_status()
         data = response.json()
         
@@ -283,9 +293,10 @@ def is_resistance_phase():
         print(f"Error happened : {e}")
         return False
 
-def get_war_winner():
+def get_war_winner(shard=1):
     try:
-        response = requests.get(SHARD_URL).json()
+        url = get_api_url(shard)
+        response = requests.get(f"{url}/worldconquest/war", headers=HEADERS).json()
         return response.get("winner", "NONE")
     except:
         return "NONE"

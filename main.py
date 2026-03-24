@@ -3,6 +3,7 @@ import os
 import json
 import datetime
 from discord.ext import commands, tasks
+from discord import app_commands
 from dotenv import load_dotenv
 import geminiGenerator
 import asyncio
@@ -25,40 +26,49 @@ intents.message_content = True
 # Basic commands mainly used for test and debug
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-# Global embed
-embed = None
+# Global embed 1 is for ABLE, and 3 for CHARLIE
+latest_embeds = {
+    1: None,
+    3: None
+}
 
 # Previous stats are stocked in a json files. So if the server crashed we can keep up some old info.
 
 ############################################
 # Management of the channels and saving
 
-def load_channels():
-    if os.path.exists(CHANNELS_FILE):
+def get_channels_file(shard):
+    suffix = "" if shard == 1 else f"-{shard}"
+    return os.path.join(BASE_DIR, f"channels{suffix}.json")
+
+def load_channels(shard):
+    file_path = get_channels_file(shard)
+    if os.path.exists(file_path):
         try:
-            with open(CHANNELS_FILE, "r") as f:
+            with open(file_path, "r") as f:
                 return json.load(f)
         except:
             return []
     return []
 
-def save_channels(channels):
-    with open(CHANNELS_FILE, "w") as f:
+def save_channels(channels, shard):
+    file_path = get_channels_file(shard)
+    with open(file_path, "w") as f:
         json.dump(channels, f)
 
-def add_channel(channel_id):
-    channels = load_channels()
+def add_channel(channel_id, shard):
+    channels = load_channels(shard)
     if channel_id not in channels:
         channels.append(channel_id)
-        save_channels(channels)
+        save_channels(channels, shard)
         return True
     return False
 
-def remove_channel(channel_id):
-    channels = load_channels()
+def remove_channel(channel_id, shard):
+    channels = load_channels(shard)
     if channel_id in channels:
         channels.remove(channel_id)
-        save_channels(channels)
+        save_channels(channels, shard)
         return True
     return False
 
@@ -94,13 +104,17 @@ async def on_ready():
         background_generator.start()
 
 ##ROUTINE !
-async def routine():
-    global embed
+async def routine(shard=1):
+    global latest_embeds
+
+    shard_name = "ABLE" if shard == 1 else f"CHARLIE (Shard {shard})"
+    suffix = "" if shard == 1 else f"-{shard}"
+
     print("#" * 30)
-    print(f"[{datetime.datetime.now().strftime('%H:%M')}] Analysing the front.")
+    print(f"[{datetime.datetime.now().strftime('%H:%M')}] Analysing the front - {shard_name}")
 
     # Getting current stats from foxhole war API
-    report_data = await bot.loop.run_in_executor(None,foxhole_client.update_war_state)
+    report_data = await bot.loop.run_in_executor(None, foxhole_client.update_war_state, shard)
     
     warden_dead = f"{report_data["warden_dead"]:,}".replace(",", " ")
     colonial_dead = f"{report_data["colonial_dead"]:,}".replace(",", " ")
@@ -118,7 +132,7 @@ async def routine():
 
     print(f"Result : {warden_dead}W / {colonial_dead}C morts. {len(events_list)} events.")
 
-    if foxhole_client.is_resistance_phase():
+    if foxhole_client.is_resistance_phase(shard):
         report = "This is resistance phase !"
     else :
         print("Asking GEMINI !")
@@ -129,22 +143,22 @@ async def routine():
     elif vp_c > vp_w: embed_color = 0x516c4b
 
     embed = discord.Embed(
-    title="📡 WAR REPORT OF THE LAST HOUR",
+    title=f"📡 WAR REPORT OF THE LAST HOUR - {shard_name}",
     description=report,
     color=embed_color,
     timestamp=datetime.datetime.now()
     )
 
     embed.add_field(
-    name="🏆 SCORE", 
-    value=f"🔵 **{vp_w}** vs **{vp_c}** 🟢\n*(Objective : {vp_target})*", 
-    inline=True
+        name="🏆 SCORE", 
+        value=f"🔵 **{vp_w}** vs **{vp_c}** 🟢\n*(Objective : {vp_target})*", 
+        inline=True
     )
 
     embed.add_field(
-    name="☠️ CASUALTIES (Last hour)", 
-    value=f"🔵 `{warden_dead}`\n🟢 `{colonial_dead}`", 
-    inline=True
+        name="☠️ CASUALTIES (Last hour)", 
+        value=f"🔵 `{warden_dead}`\n🟢 `{colonial_dead}`", 
+        inline=True
     )
 
     embed.add_field(
@@ -155,61 +169,71 @@ async def routine():
 
     embed.set_footer(text="Foxhole War Correspondent Bot", icon_url="https://imgur.com/K4YlwPT")
     
-    await bot.loop.run_in_executor(None,mapGenerator.generate_world_map,vp_w,vp_c,vp_target,changes)
+    latest_embeds[shard] = embed
+
+    await bot.loop.run_in_executor(None, mapGenerator.generate_world_map, vp_w, vp_c, vp_target, changes, shard)
 
     print("Report succefully generated.")
 
-    print("Sending to all channels subbed !")
-    
-    channels_ids = load_channels()
+    print(f"Sending to all channels subbed for Shard {shard}...")
+
+    channels_ids = load_channels(shard)
     
     if not channels_ids:
-        print("No channels found")
+        print("No channels found for this shard")
     
     for channel_id in channels_ids:
         channel = bot.get_channel(channel_id)
         if channel:
             try:
-                map_path = os.path.join(BASE_DIR, "world_map_hex.png")
+                map_path = os.path.join(BASE_DIR, f"world_map_hex{suffix}.png")
 
                 if os.path.exists(map_path):
                     file = discord.File(map_path)
-                
-                await channel.send(embed=embed, file=file)
-                print(f"   -> sent in {channel.guild.name} / #{channel.name}")
+                    await channel.send(embed=embed, file=file)
+                    print(f"   -> sent in {channel.guild.name} / #{channel.name}")
+                else:
+                    await channel.send(embed=embed)
             except Exception as e:
-                print(f"   Error when sendint to {channel_id} : {e}")
+                print(f"   Error when sending to {channel_id} : {e}")
         else:
             print(f"   Problem occured with {channel_id}. (Likely bot got kicked of server)")
 
-    print("Sent to all subscribed peoples !")
+    print(f"Sent to all subscribed peoples for Shard {shard}!")
 
-    w_clean = int(str(warden_dead).replace(" ", ""))
-    c_clean = int(str(colonial_dead).replace(" ", ""))
-    
-    total_hourly = w_clean + c_clean
-    
-    total_fmt = f"{total_hourly:,}".replace(",", " ")
 
-    new_status = f"🔵{vp_w} vs 🟢{vp_c} | ☠️ {total_fmt}/h"
-    
-    await bot.change_presence(
-        activity=discord.Activity(
-            type=discord.ActivityType.watching, 
-            name=new_status
+    # DISCORD STATUS IF ITS ABLE (because this is the most played and there can be only one...)
+    if shard == 1 :
+        w_clean = int(str(warden_dead).replace(" ", ""))
+        c_clean = int(str(colonial_dead).replace(" ", ""))
+        
+        total_hourly = w_clean + c_clean
+        
+        total_fmt = f"{total_hourly:,}".replace(",", " ")
+
+        new_status = f"🔵{vp_w} vs 🟢{vp_c} | ☠️ {total_fmt}/h"
+        
+        await bot.change_presence(
+            activity=discord.Activity(
+                type=discord.ActivityType.watching, 
+                name=new_status
+            )
         )
-    )
 
-    print("Status changed !")
+        print("Status changed !")
 
-    print("End of the routine.")
+    print(f"End of the routine for Shard {shard}.")
     print("#" * 30)
 
 
 # we create a loop repeating itself every hour to run the routine.
 @tasks.loop(minutes=60)
 async def background_generator():
-    await routine()
+    await routine(1) # Able
+
+    await asyncio.sleep(10)
+    
+    await routine(3) # Charlie
 
 @background_generator.before_loop
 async def before_bg():
@@ -227,32 +251,51 @@ async def before_bg():
 #### COMMANDS SECTION
 
 # Command
-@bot.tree.command(name="report", description="What happened the last hour on foxhole ?")
-async def rapport(interaction: discord.Interaction):
-    map_path = os.path.join(BASE_DIR, "world_map_hex.png")
+@bot.tree.command(name="report", description="What happened the last hour on Foxhole?")
+@app_commands.describe(shard="Which shard? (1 for Able, 3 for Charlie)")
+async def rapport(interaction: discord.Interaction, shard: int = 1):
+    
+    if shard not in [1, 3]:
+        await interaction.response.send_message("❌ Invalid Shard. Please choose 1 or 3.", ephemeral=True)
+        return
 
-    if os.path.exists(map_path):
+    suffix = "" if shard == 1 else f"-{shard}"
+    map_path = os.path.join(BASE_DIR, f"world_map_hex{suffix}.png")
+    embed_to_send = latest_embeds.get(shard)
+
+    if embed_to_send and os.path.exists(map_path):
         file = discord.File(map_path)
-        
-        await interaction.response.send_message(embed=embed, file=file)
+        await interaction.response.send_message(embed=embed_to_send, file=file)
+    elif embed_to_send:
+        await interaction.response.send_message(embed=embed_to_send)
     else:
-        await interaction.response.send_message("Something went wrong*")
+        await interaction.response.send_message(f"⏳ Report for Shard {shard} is not generated yet. Please wait for the next hour.", ephemeral=True)
 
 @bot.tree.command(name="set_display", description="Enable automatic updates on this channel.")
-async def set_display(interaction: discord.Interaction):
-    added = add_channel(interaction.channel_id)
+@app_commands.describe(shard="Which shard to follow? (1 for Able, 3 for Charlie)")
+async def set_display(interaction: discord.Interaction, shard: int = 1):
+    if shard not in [1, 3]:
+        await interaction.response.send_message("❌ Invalid Shard. Please choose 1 or 3.", ephemeral=True)
+        return
+
+    added = add_channel(interaction.channel_id, shard)
+    shard_name = "ABLE" if shard == 1 else "CHARLIE"
+    
     if added:
-        await interaction.response.send_message(f"This channel (<#{interaction.channel_id}>) will receive automatically the updates.")
+        await interaction.response.send_message(f"✅ This channel (<#{interaction.channel_id}>) will automatically receive updates for **Shard {shard} ({shard_name})**.")
     else:
-        await interaction.response.send_message("Error occured.", ephemeral=True)
+        await interaction.response.send_message(f"⚠️ This channel is already subscribed to Shard {shard}.", ephemeral=True)
 
 @bot.tree.command(name="remove_display", description="Disable automatic updates from this channel.")
-async def remove_display(interaction: discord.Interaction):
-    removed = remove_channel(interaction.channel_id)
+@app_commands.describe(shard="Which shard to unfollow? (1 for Able, 3 for Charlie)")
+async def remove_display(interaction: discord.Interaction, shard: int = 1):
+    removed = remove_channel(interaction.channel_id, shard)
+    shard_name = "ABLE" if shard == 1 else "CHARLIE"
+    
     if removed:
-        await interaction.response.send_message(f"This channel (<#{interaction.channel_id}>) has been removed from automatic updates.")
+        await interaction.response.send_message(f"🚫 This channel (<#{interaction.channel_id}>) has been removed from automatic updates for **Shard {shard} ({shard_name})**.")
     else:
-        await interaction.response.send_message("Error occured.", ephemeral=True)
+        await interaction.response.send_message("⚠️ Error: This channel was not subscribed to this Shard.", ephemeral=True)
 
 @bot.tree.command(name="help", description="Displays the list of commands and the user guide, and useful informations.")
 async def help_cmd(interaction: discord.Interaction):
@@ -266,7 +309,7 @@ async def help_cmd(interaction: discord.Interaction):
     embed.add_field(
         name="📢 Public Commands",
         value=(
-            "**/report** : Displays the latest situation report (Score + Map).\n"
+            "**/report [shard]** : Displays the latest situation report (Score + Map). You can specify shard 1 or 3.\n"
             "**/help** : Displays this help message."
         ),
         inline=False
@@ -275,8 +318,8 @@ async def help_cmd(interaction: discord.Interaction):
     embed.add_field(
         name="⚙️ Administration (Admin Only)",
         value=(
-            "**/set_display** : Sets this channel to receive automatic hourly reports.\n"
-            "**/remove_display** : Stops automatic reporting in this channel."
+            "**/set_display [shard]** : Sets this channel to receive automatic hourly reports for Shard 1 or 3.\n"
+            "**/remove_display [shard]** : Stops automatic reporting in this channel."
         ),
         inline=False
     )
@@ -300,8 +343,19 @@ async def help_cmd(interaction: discord.Interaction):
 # FORCE UPDATE, DEV TOOL INTENDED ONLY. PUT IN COMMENT WHEN NOT OF USE #################################################
 # force la génération sans attendre 1h
 @bot.command(name="force")
-async def force(ctx):
-    await ctx.send("Disabled command")
+async def force(ctx, shard: int = 1):
+    return
+    if shard not in [1, 3]:
+        await ctx.send("❌ Shard invalid. Use `!force 1` (Able) or `!force 3` (Charlie).")
+        return
+
+    await ctx.send(f"🔄 **Shard {shard}**...")
+    
+    try:
+        await routine(shard)
+        await ctx.send(f"✅ forced")
+    except Exception as e:
+        await ctx.send(f"⚠️ problem : {e}")
 
 # Now running the bot.
 print("Bot should run now.")

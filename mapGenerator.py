@@ -1,6 +1,7 @@
 import requests
 from PIL import Image, ImageDraw, ImageOps, ImageFont
 import math
+import os
 
 HEX_RADIUS = 100
 VORONOI_PRECISION = 32
@@ -11,7 +12,8 @@ COLOR_NEUTRAL = (200, 200, 200)
 COLOR_WARDEN_DARK = (20, 40, 90)
 COLOR_COLONIAL_DARK = (40, 60, 35)
 
-API_URL = "https://war-service-live.foxholeservices.com/api"
+API_URL = "https://war-service-live.foxholeservices.com/api" # Able
+API_URL_3 = "https://war-service-live-3.foxholeservices.com/api" # Charlie
 
 WORLD_GRID = {
     "OlavisWakeHex": (-2, 2),
@@ -81,10 +83,14 @@ WORLD_GRID = {
     "PipersEnclaveHex": (10, 4),
 }
 
-def get_data(map_name, type_data):
+def get_api_url(shard):
+    return API_URL_3 if shard == 3 else API_URL
+
+def get_data(map_name, type_data, shard=1):
     try:
         headers = { "User-Agent": "FoxholeWarBot/2.2 From .colibri" }
-        url = f"{API_URL}/worldconquest/maps/{map_name}/{type_data}"
+        url_base = get_api_url(shard)
+        url = f"{url_base}/worldconquest/maps/{map_name}/{type_data}"
         resp = requests.get(url, headers=headers, timeout=2)
         return resp.json() if resp.status_code == 200 else None
     except:
@@ -115,21 +121,21 @@ def create_hex_mask(radius):
     draw.polygon(points, fill=255)
     return mask, w, h
 
-
-
-def generate_single_hex(map_name, radius=HEX_RADIUS, return_image=False, highlight_list=None):
+def generate_single_hex(map_name, radius=HEX_RADIUS, return_image=False, highlight_list=None, shard=1):
     mask, w, h = create_hex_mask(radius)
     img = Image.new("RGBA", (w, h), (0,0,0,0))
     
-    static = get_data(map_name, "static")
-    dynamic = get_data(map_name, "dynamic/public")
+    static = get_data(map_name, "static", shard)
+    dynamic = get_data(map_name, "dynamic/public", shard)
     
     if not static or not dynamic:
         if return_image: return None
         return None
 
     bases = []
-    bases = []
+    if highlight_list is None:
+        highlight_list = []
+        
     for item in dynamic.get("mapItems", []):
         if item["iconType"] in [56, 57, 58, 45, 27]:
              key = f"{item['x']:.3f}_{item['y']:.3f}"
@@ -153,6 +159,7 @@ def generate_single_hex(map_name, radius=HEX_RADIUS, return_image=False, highlig
                 nx, ny = px/w, py/h
                 closest_dist = 2.0
                 closest_team = "NONE"
+                closest_is_fresh = False
                 
                 for base in bases:
                     dist = ((nx - base["x"]) * (w/h))**2 + (ny - base["y"])**2
@@ -210,14 +217,23 @@ def generate_single_hex(map_name, radius=HEX_RADIUS, return_image=False, highlig
     if return_image:
         return img
     else:
-        filename = f"{map_name}_hex.png"
+        suffix = "-3" if shard == 3 else ""
+        filename = f"{map_name}_hex{suffix}.png"
         img.save(filename)
         return filename
 
-def generate_world_map(vp_w=0, vp_c=0, vp_target=32, recent_changes=None):
-    print("Generating map !")
+def generate_world_map(vp_w=0, vp_c=0, vp_target=32, recent_changes=None, shard=1):
+    print(f"Generating map for Shard {shard}!")
     
-    maps = requests.get(f"{API_URL}/worldconquest/maps").json()
+    if recent_changes is None:
+        recent_changes = {}
+
+    url_base = get_api_url(shard)
+    try:
+        maps = requests.get(f"{url_base}/worldconquest/maps").json()
+    except:
+        print("Error fetching map list for generation.")
+        return None
     
     hex_w = int(2 * HEX_RADIUS)
     hex_h = int(math.sqrt(3) * HEX_RADIUS)
@@ -243,7 +259,8 @@ def generate_world_map(vp_w=0, vp_c=0, vp_target=32, recent_changes=None):
             
         gx, gy = WORLD_GRID[map_name]
         map_highlights = recent_changes.get(map_name, [])
-        tile = generate_single_hex(map_name, radius=HEX_RADIUS, return_image=True, highlight_list=map_highlights)
+        
+        tile = generate_single_hex(map_name, radius=HEX_RADIUS, return_image=True, highlight_list=map_highlights, shard=shard)
         
         if tile:
             draw_x = gx - min_x
@@ -268,11 +285,11 @@ def generate_world_map(vp_w=0, vp_c=0, vp_target=32, recent_changes=None):
     draw = ImageDraw.Draw(world_img)
     
     try:
-        hud_font = ImageFont.truetype("/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf", 40)
         label_font = ImageFont.truetype("/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf", 40)
+        number_font = ImageFont.truetype("/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf", 65)
     except:
-        hud_font = ImageFont.load_default()
         label_font = ImageFont.load_default()
+        number_font = ImageFont.load_default()
 
     text_w = f"{vp_w} / {vp_target}"
     label_w = "WARDENS"
@@ -281,9 +298,9 @@ def generate_world_map(vp_w=0, vp_c=0, vp_target=32, recent_changes=None):
     y_w = 30
     
     draw.text((x_w, y_w), label_w, font=label_font, fill=COLOR_WARDEN, anchor="ra", stroke_width=3, stroke_fill="black")
-    draw.text((x_w, y_w + 50), text_w, font=hud_font, fill="white", anchor="ra", stroke_width=4, stroke_fill="black")
+    draw.text((x_w, y_w + 50), text_w, font=number_font, fill="white", anchor="ra", stroke_width=4, stroke_fill="black")
     
-    draw.rectangle((x_w + 10, y_w, x_w + 25, y_w + 110), fill=COLOR_WARDEN, outline="black")
+    draw.rectangle((x_w + 10, y_w, x_w + 25, y_w + 125), fill=COLOR_WARDEN, outline="black")
 
     text_c = f"{vp_c} / {vp_target}"
     label_c = "COLONIALS"
@@ -291,20 +308,34 @@ def generate_world_map(vp_w=0, vp_c=0, vp_target=32, recent_changes=None):
     x_c = 30
     y_c = world_img.height - 30
     
-    draw.text((x_c, y_c), text_c, font=hud_font, fill="white", anchor="lb", stroke_width=4, stroke_fill="black")
-    draw.text((x_c, y_c - 90), label_c, font=label_font, fill=COLOR_COLONIAL, anchor="lb", stroke_width=3, stroke_fill="black")
+    draw.text((x_c, y_c - 20), text_c, font=number_font, fill="white", anchor="lb", stroke_width=4, stroke_fill="black")
+    draw.text((x_c, y_c - 95), label_c, font=label_font, fill=COLOR_COLONIAL, anchor="lb", stroke_width=3, stroke_fill="black")
     
-    draw.rectangle((x_c - 25, y_c - 130, x_c - 10, y_c), fill=COLOR_COLONIAL, outline="black")
+    draw.rectangle((x_c - 25, y_c - 135, x_c - 10, y_c), fill=COLOR_COLONIAL, outline="black")
+
+    shard_name = "ABLE" if shard == 1 else "CHARLIE"
+    
+    if vp_w > vp_c:
+        shard_color = COLOR_WARDEN
+    elif vp_c > vp_w:
+        shard_color = COLOR_COLONIAL
+    else:
+        shard_color = COLOR_NEUTRAL
+
+    draw.text((30, 30), shard_name, font=number_font, fill=shard_color, anchor="la", stroke_width=4, stroke_fill="black")
 
     if world_img.width > 2000:
         ratio = 2000 / world_img.width
         new_h = int(world_img.height * ratio)
         world_img = world_img.resize((2000, new_h), resample=Image.Resampling.BILINEAR)
 
-    filename = "world_map_hex.png"
+    suffix = "-3" if shard == 3 else ""
+    filename = f"world_map_hex{suffix}.png"
+    
     world_img.save(filename, "PNG")
-    print("Map generated, and saved !")
+    print(f"Map generated and saved as {filename} !")
     return filename
 
+# Local testing
 if __name__ == "__main__":
-    generate_world_map(16,16)
+    generate_world_map(16, 16, shard=1)
