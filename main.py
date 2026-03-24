@@ -302,7 +302,7 @@ async def help_cmd(interaction: discord.Interaction):
     
     embed = discord.Embed(
         title="📚 Help - Foxhole War Correspondent",
-        description="I am a bot tracking the Foxhole war in real-time.\nI roast the front every hour.\n\n This was developped by '.colibri' for any help please reach out to him.\nThis bot is still in developpement, and some things may not work perfectly. Discord : https://discord.gg/B4hCxyfUyN",
+        description="I am a bot tracking the Foxhole war in real-time.\nI roast the front every hour.\n\n This was developped by '.colibri' for any help please reach out to him.\nThis bot is still in developpement, and some things may not work perfectly. Discord : https://discord.gg/B4hCxyfUyN \n Github : https://github.com/Colibriii/foxholeDiscordBotUpdater",
         color=0xff9900
     )
 
